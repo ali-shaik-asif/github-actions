@@ -1,0 +1,14 @@
+name: Hello World Demo # name of the workflow 
+
+# This defines the event that triggers the workflow
+on: [push] # triggeres 
+
+jobs:
+  say-hello:
+    # The type of virtual machine the job will run on
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Print the classic message in the logs
+      - name: Run Hello World
+        run: echo "Hello, World!"
