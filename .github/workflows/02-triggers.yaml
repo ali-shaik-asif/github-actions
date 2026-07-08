@@ -1,0 +1,14 @@
+name: triggers Demo # name of the workflow 
+
+# This defines the event that triggers the workflow
+on: workflow_dispatch # triggeres 
+
+jobs:
+  say-hello-from-triggers:
+    # The type of virtual machine the job will run on
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Print the classic message in the logs
+      - name: triggers manual 
+        run: echo "Hello, World!,from manual dispatch"
