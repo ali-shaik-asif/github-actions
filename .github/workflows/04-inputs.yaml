@@ -1,0 +1,43 @@
+name: Manual Deployment Workflow
+on:
+  workflow_dispatch:
+    inputs:
+      log_level:
+        description: 'Choose logging verbosity'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+          - info
+          - warning
+          - debug
+      deploy_target:
+        description: 'Target environment'
+        required: true
+        type: environment
+      tags:
+        description: 'Enter deployment tags'
+        required: false
+        type: string
+      run_tests:
+        description: 'Execute optional test suites'
+        required: true
+        type: boolean
+        default: true
+      retry_count:
+        description: 'Failed step retry limit'
+        required: false
+        type: number
+        default: 3
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log User Inputs
+        run: |
+          echo "Selected log level: ${{ inputs.log_level }}"
+          echo "Target environment: ${{ inputs.deploy_target }}"
+          echo "Deployment tags: ${{ inputs.tags }}"
+          echo "Execute tests toggle: ${{ inputs.run_tests }}"
+          echo "Allowed retries: ${{ inputs.retry_count }}"
