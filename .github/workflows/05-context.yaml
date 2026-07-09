@@ -14,8 +14,8 @@ jobs:
     # The type of virtual machine the job will run on
     runs-on: ubuntu-latest
     outputs:
-      image-name: ${{ steps.tages.outputs.name }}
-      image-version: ${{ steps.tages.outputs.lastname }}
+      name: ${{ steps.tages.outputs.name }}
+      lastname: ${{ steps.tages.outputs.lastname }}
 
     steps:
       # Step 1: Print the classic message in the logs
