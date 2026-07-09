@@ -65,7 +65,7 @@ jobs:
       - name: print github env in another job
         run: |
           echo "version: ${{ needs.access-the-secerts.outputs.version }}"
-          echo "image-name: ${{ needs.access-the-secerts.outputs.image-name }}"
+          echo "image-name: ${{ needs.access-the-secerts.outputs.image }}"
 
 
 
