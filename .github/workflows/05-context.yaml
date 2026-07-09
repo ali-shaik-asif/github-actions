@@ -34,5 +34,16 @@ jobs:
       - name: Print  variable
         run: echo "The database host is ${{ vars.dburl }}"
 
+      - name: image version and name 
+        id: tages 
+        run : | 
+          echo "version=1.9.0" >> $GITHUB_OUTPUT
+          echo "image-name=user" >> $GITHUB_OUTPUT
+
+      - name: printing the image name and verison
+        run: |
+          echo "image-version is : ${{ steps.tages.output.version }}"
+          echo "image-name is : ${{ steps.tages.output.iamge-name }}"
+
 
 
