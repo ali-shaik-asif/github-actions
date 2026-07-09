@@ -29,7 +29,7 @@ jobs:
 
       - name: accessing the sercets
         run : |
-          echo "my passowrd is : ${{ secrets.ASIF_ALI_PASWORD }}"
-          echo "yusuf ali is : ${{ secrets.YUSUF_ALI }}"
+          echo "my db_url is : ${{ secrets.DBURL }}"
+
 
 
