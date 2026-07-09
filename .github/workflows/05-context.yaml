@@ -42,8 +42,8 @@ jobs:
 
       - name: printing the image name and verison
         run: |
-          echo "image-version is : ${{ steps.tages.output.version }}"
-          echo "image-name is : ${{ steps.tages.output.iamge-name }}"
+          echo "image-version is : ${{ steps.tages.outputs.version }}"
+          echo "image-name is : ${{ steps.tages.outputs.iamge-name }}"
 
 
 
