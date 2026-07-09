@@ -31,5 +31,8 @@ jobs:
         run : |
           echo "my db_url is : ${{ secrets.DBURL }}"
 
+      - name: Print  variable
+        run: echo "The database host is ${{ vars.dburl }}"
+
 
 
