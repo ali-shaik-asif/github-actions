@@ -25,5 +25,11 @@ jobs:
         run: |
           echo "project: $project"
           echo "component: $component"
-          echo "enviroment: $enviroment"
+          echo "enviroment: $enviroment" 
+
+      - name: accessing the sercets
+        run : |
+          echo "my passowrd is : ${{ ASIF_ALI_PASWORD}}"
+          echo "yusuf ali is : ${{YUSUF_ALI}}"
+
 
