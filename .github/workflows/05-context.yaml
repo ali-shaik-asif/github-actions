@@ -13,4 +13,4 @@ jobs:
       - name: context-info
         run: | 
          echo "${{ toJson(github) }}"
-         echo "branch_name ${{ github.ref }}"
+         echo "branch_name: ${{ github.ref }}"
