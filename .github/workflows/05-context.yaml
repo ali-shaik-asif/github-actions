@@ -14,8 +14,8 @@ jobs:
     # The type of virtual machine the job will run on
     runs-on: ubuntu-latest
     outputs:
-      name: ${{ steps.tages.outputs.name }}
-      lastname: ${{ steps.tages.outputs.lastname }}
+      image: ${{ steps.tages.outputs.image-name}}
+      version: ${{ steps.tages.outputs.version}}
 
     steps:
       # Step 1: Print the classic message in the logs
@@ -64,8 +64,8 @@ jobs:
     steps:
       - name: print github env in another job
         run: |
-          echo "Image Name: ${{ needs.github-context.outputs.name }}"
-          echo "Image Version: ${{ needs.github-context.outputs.lastname }}"
+          echo "version: ${{ needs.github-context.outputs.version }}"
+          echo "image-name: ${{ needs.github-context.outputs.image-name }}"
 
 
 
