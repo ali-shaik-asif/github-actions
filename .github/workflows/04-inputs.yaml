@@ -18,7 +18,7 @@ on:
       tags:
         description: 'Enter deployment tags'
         required: false
-        type: string
+        type: boolean
       run_tests:
         description: 'Execute optional test suites'
         required: true
