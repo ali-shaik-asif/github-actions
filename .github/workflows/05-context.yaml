@@ -47,9 +47,9 @@ jobs:
 
       - name: print github env
         run: |
-          echo "name=shaikaif"
-          echo "lastname=ali"
-          
+          echo "name=shaikaif" >> $GITHUB_ENV
+          echo "lastname=ali" >> $GITHUB_ENV
+
       - name: print github env
         run: |
           echo "myname is: $name"
