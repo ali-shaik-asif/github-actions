@@ -66,6 +66,12 @@ jobs:
         run: |
           echo "version: ${{ needs.access-the-secerts.outputs.version }}"
           echo "image-name: ${{ needs.access-the-secerts.outputs.image }}"
+  
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: sonar
+        run: echo "scan"
 
 
 
