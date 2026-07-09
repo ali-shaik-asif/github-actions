@@ -11,4 +11,6 @@ jobs:
     steps:
       # Step 1: Print the classic message in the logs
       - name: context-info
-        run: echo "${{ toJson(github) }}"
+        run: | 
+         echo "${{ toJson(github) }}"
+         echo "branch_name ${{ github.ref }}"
