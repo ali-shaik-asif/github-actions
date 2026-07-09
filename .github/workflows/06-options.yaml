@@ -14,5 +14,5 @@ jobs:
     steps:
       # Step 1: Print the classic message in the logs
       - name: Run Hello World
-        run: sleep 20
+        run: sleep 60
 
