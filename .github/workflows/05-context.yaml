@@ -45,5 +45,17 @@ jobs:
           echo "image-version is : ${{ steps.tages.outputs.version }}"
           echo "image-name is : ${{ steps.tages.outputs.image-name }}"
 
+      - name: print github env
+        run: |
+          echo "name=shaikaif"
+          echo "lastname=ali"
+          
+      - name: print github env
+        run: |
+          echo "myname is: $name"
+          echo "mylastname is: $lastname"
+
+
+
 
 
